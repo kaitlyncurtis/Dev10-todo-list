@@ -7,9 +7,12 @@ function createAlert() {
     newAlert.innerHTML = `${task}<br>${timeLeft} day(s)`
 
     alerts.appendChild(newAlert);
+
+    document.getElementById("task").value = "";
+    document.getElementById("days").value = "";
+    document.getElementById("task").focus()
 }
 
 //.appendChild() is a method that can be used on DOM ... nodes ? 
 //think this is how I can add new little objects for each task
-//reminder to self to set the inputs to clear after the submit button is pressed
-//reminder to self to set focus on the task input box at some point
+//is it possible to clear both inputs with like a querySelector or more general get selector?
