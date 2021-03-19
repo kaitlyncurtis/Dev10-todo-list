@@ -3,7 +3,7 @@ function createAlert() {
     let timeLeft = document.getElementById("days").value;
 
     let alerts = document.getElementById("alerts");
-    let newAlert = document.createElement("p");
+    let newAlert = document.createElement("div");
     if(Number(timeLeft) <= 3) {
         newAlert.className = "alert alert-danger";
     }
