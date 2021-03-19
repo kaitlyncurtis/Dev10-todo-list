@@ -2,10 +2,8 @@ function createAlert() {
     let task = document.getElementById("task").value;
     let timeLeft = document.getElementById("days").value;
 
-<<<<<<< Updated upstream
     let alerts = document.getElementById("alerts");
     let newAlert = document.createElement("p");
-=======
     if(Number(timeLeft) <= 3) {
         newAlert.className = "alert alert-danger";
     }
@@ -16,7 +14,6 @@ function createAlert() {
         newAlert.className = "alert alert-secondary";
     }
     newAlert.setAttribute("role", "alert");
->>>>>>> Stashed changes
     newAlert.innerHTML = `${task}<br>${timeLeft} day(s)`
 
     alerts.appendChild(newAlert);
@@ -38,10 +35,8 @@ function createAlert() {
 //the app got confused because it was in process of trying to submit the form, but the values were empty
 //so it kept throwing errors. meanwhile our alert was already created.
 
-<<<<<<< Updated upstream
 //.appendChild() is a method that can be used on DOM ... nodes ? 
 //think this is how I can add new little objects for each task
-=======
 function getTask() {
     task = document.getElementById("task").value;
     timeLeft = document.getElementById("days").value;
@@ -77,7 +72,6 @@ function getTask() {
 //so that the HTML5 validation can do it's thing? and an alert isn't created inadvertently?
 //maybe there's an equivalent of a break statement I can use that can accomplish the same
 
->>>>>>> Stashed changes
 //is it possible to clear both inputs with like a querySelector or more general get selector?
 //ok the querySelectorAll didn't work, it didn't change the value of those two inputs 
 //when I tried to target them using the input element. maybe another way?
