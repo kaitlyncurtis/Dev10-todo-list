@@ -13,13 +13,21 @@
             <div class="form-group">
                 <p>
                     <label for="task">Task</label><br>
+<<<<<<< Updated upstream
                     <input type="text" id="task">
+=======
+                    <input type="text" id="task" required autofocus>
+>>>>>>> Stashed changes
                 </p>
                 <p>
                     <label for="days">Days to complete</label><br>
                     <input type="number" id="days">
                 </p>
             </div>
+<<<<<<< Updated upstream
+=======
+            <button type="button" class="btn btn-primary" onclick="getTask()">Submit</button>
+>>>>>>> Stashed changes
         </form>
             <button type="button" class="btn btn-primary" onclick="createAlert()">Submit</button>
             <p id="alerts"></p>
@@ -29,5 +37,21 @@
     <!--I replaced the links for Bootstrap starter template (from WebDev course) with links/code for version 5.0.0-->
     <!--which I found in the Bootstrap documentation. It seems to work the same but I notice there is only 1 .js file linked-->
     <!--and no links/reference to any jQuery - the refresher assignment mentions something about jQuery and how it has fallen out of favor, so maybe this is preferable?-->
+<<<<<<< Updated upstream
+=======
+
+    <!--trying to use HTML5 form control validation, required attribute and min attribute for the number-->
+    <!--its not working. guide I read says that required is a boolean attribute and if not complete, you can't submit the form-->
+    <!--but maybe since i am using the button differently, those attributes aren't being checked/triggered?-->
+
+    <!--ok I learned: 1. my button was outside the form which idk if that actually had an impact but probably should be inside it-->
+    <!--2. there is another uhhhh event attribute you can use, onsubmit, that only runs the function when the form is SUBMITTED-->
+    <!--(when that attribute was still set to onclick, it was throwing the "tooltip" but still creating the alert which was unwanted/invalid)-->
+
+    <!--ok so now valiation is active but it's not creating alerts........ like it did before-->
+    <!--i wonder what is ACTUALLY meant by submit like does a server need to be involved? -->
+    <!--I don't have like a get method or post method, maybe that has something to do with it-->
+    <!--now I understand this confusion! I think this is because it was refreshing the page after each time button was pressed, on submit-->
+>>>>>>> Stashed changes
 </body>
 </html>
