@@ -1,5 +1,26 @@
-let task = ""
-let timeLeft = ""
+let task = document.getElementById("task");
+let timeLeft = document.getElementById("days");
+/*
+task.addEventListener("input", function(event) {
+    if(task.validity.valueMissing) {
+        task.setCustomValidity("Please enter a value");
+    } else {
+        task.setCustomValidity("");
+    }
+});
+    /*
+    if(task.length == 0) {
+        return;
+        }
+    else if(timeLeft.length == 0) {
+        return;
+    }
+    else if(isNaN(Number(timeLeft))) {
+        return;
+    }
+    else if(Number(timeLeft) < 1) {
+        return;
+*/
 
 function createAlert() {
     let alerts = document.getElementById("alerts");
@@ -45,6 +66,11 @@ function getTask() {
         createAlert();
     }
 }
+
+
+//ok initial thoughts/planning. i think i still need an onclick. 
+//but maybe the onclick can just be to create the alert?
+//and can use eventListeners to do all validation before they even have to press the button
 
 //read MDN on form validation and the section with custom JS. 
 //they use event listeners and you can set custom validity messages based on certain conditions

@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <h1>Todo List</h1>
-        <form>
+        <form onsubmit="return false">   <!--the onsubmit attribute i believe is preventing my button from actually submitting and allowing onclick function to happen and alerts to be retained-->
             <div class="form-group">
                 <p>
                     <label for="task">Task</label><br>
@@ -26,7 +26,7 @@
                     <input type="number" id="days" required min=1>
                 </p>
             </div>
-            <button type="button" class="btn btn-primary" onclick="getTask()">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="getTask()">Submit</button>
         </form>
         <p id="alerts"></p>
     </div>
@@ -48,5 +48,11 @@
     <!--i wonder what is ACTUALLY meant by submit like does a server need to be involved? -->
     <!--I don't have like a get method or post method, maybe that has something to do with it-->
     <!--now I understand this confusion! I think this is because it was refreshing the page after each time button was pressed, on submit-->
+
+    <!--stackoverflow post showed me that you can change the onsubmit attribute of the form to "return false"-->
+    <!--which prevents refresh and allows for the same form validation you get when button type is submit, but you can use onclick functions-->
+    <!--next figure out how to get the validation to show only after user like enters or skips past a field-->
+    <!--right now it's showing up immediately after button is clicked and alert is created-->
+    <!--perhaps due to the focus or my JS changing value to""?-->
 </body>
 </html>
