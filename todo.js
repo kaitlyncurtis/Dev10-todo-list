@@ -17,7 +17,7 @@ function createAlert() {
     newAlert.setAttribute("role", "alert");
     newAlert.innerHTML = `${task}<br>${timeLeft} day(s)
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>`
-
+    //can I change positioning of button within the alert?
     alerts.appendChild(newAlert);
 
     document.getElementById("task").value = "";
@@ -45,6 +45,10 @@ function getTask() {
         createAlert();
     }
 }
+
+//read MDN on form validation and the section with custom JS. 
+//they use event listeners and you can set custom validity messages based on certain conditions
+//i think that's the way to go. gonna start a new branch off main n try it.
 
 //the above function not working :/ when I enter both fields correctly it doesn't create alert, 
 //but it doesn't print error message to the console
