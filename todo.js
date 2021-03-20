@@ -1,7 +1,7 @@
-function createAlert() {
-    let task = document.getElementById("task").value;
-    let timeLeft = document.getElementById("days").value;
+let task = ""
+let timeLeft = ""
 
+function createAlert() {
     let alerts = document.getElementById("alerts");
     let newAlert = document.createElement("div");
 
@@ -89,3 +89,4 @@ function getTask() {
 //the lines of text withing the alert are overlapping and like "wrapping" to a new line on the page
 //rather than wrapping inside the lil box
 //i changed it to d-inline-block and it looks better
+
