@@ -9,17 +9,20 @@
         .container {
             margin: auto;  
         }
+        .field-validation-valid {
+            display: none;
+        }
     </style>
     <!--thought this would center content but it didn't do anything-->
 </head>
 <body>
     <div class="container">
         <h1>Todo List</h1>
-        <form onsubmit="return false">   <!--the onsubmit attribute i believe is preventing my button from actually submitting and allowing onclick function to happen and alerts to be retained-->
+        <form id="taskform" onsubmit="return false">   <!--the onsubmit attribute i believe is preventing my button from actually submitting and allowing onclick function to happen and alerts to be retained-->
             <div class="form-group">
                 <p>
                     <label for="task">Task</label><br>
-                    <input type="text" id="task" required autofocus>
+                    <input type="text" id="task" required>
                 </p>
                 <p>
                     <label for="days">Days to complete</label><br>
