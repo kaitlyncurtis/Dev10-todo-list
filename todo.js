@@ -27,13 +27,13 @@ function createAlert() {
     let newAlert = document.createElement("div");
 
     if(Number(timeLeft) <= 3) {
-        newAlert.className = "d-inline-block alert alert-danger";
+        newAlert.className = "d-inline-block alert alert-danger alert-dismissable";
     }
     else if(Number(timeLeft) <=6) {
-        newAlert.className = "d-inline-block alert alert-warning";
+        newAlert.className = "d-inline-block alert alert-warning alert-dismissable";
     }
     else {
-        newAlert.className = "d-inline-block alert alert-secondary";
+        newAlert.className = "d-inline-block alert alert-secondary alert-dismissable";
     }
     newAlert.setAttribute("role", "alert");
     newAlert.innerHTML = `${task}<br>${timeLeft} day(s)

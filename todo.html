@@ -7,8 +7,7 @@
     <title>Todo List</title>
     <style>
         .container-sm {
-            margin: auto;
-            padding: auto;
+            width: 60vw;
         }
 
         h1 {
@@ -20,15 +19,19 @@
         }
 
         .alert {
-            margin: 10px
+            margin: 10px;
+            padding-right: 4rem;
         }
 
         .btn-close {
-            align-items: center;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
         }
 
         #alerts {
-            margin: 3%;
+            margin: 15px;
+            padding: 15px;
             border-top-width: 1px;
             border-top-style: solid;
             border-top-color: #d3d6d8;
@@ -37,7 +40,7 @@
     <!--thought this would center content but it didn't do anything-->
 </head>
 <body>
-    <div class="container-sm">
+    <div class="container-sm div-container">
         <h1>Todo List</h1>
         <form>
             <div class="form-group">
