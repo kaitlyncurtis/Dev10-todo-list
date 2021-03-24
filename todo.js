@@ -1,10 +1,15 @@
 let task = document.getElementById("task");
 let timeLeft = document.getElementById("days");
+let button = document.getElementById("btn");
 
-task.addEventListener("input", function(event) {
+button.addEventListener("click", function(event) {
+    console.log("hello");
     if(task.validity.valueMissing) {
-        task.setCustomValidity("Please enter a value");
+        console.log("its not valid");
+        //it says it cant read validity property on HTMLButtonElement; so it must be checking validity on the button and not on the task. Can I change that?
+        document.getElementById("task").setCustomValidity("Please enter a value");
     } else {
+        console.log("it's valid");
         task.setCustomValidity("");
     }
 });
@@ -68,6 +73,15 @@ function getTask() {
     }
 }
 
+//initial planning/thoughts/discoveries:
+//YT vid i watched showed me that event listeners can replace event handlers like onclick
+//and can have the same functionality and more!
+//the "input" event registers each time a character is entered into my task input field
+//I think best option will be:
+//event listener on the click button 
+//when it "hears" a click it checks each input for validity and displays error message if needed
+//maybe I can even set custom validity.
+//but to start I will just make a little error message pop up somewhere in a simple way
 
 //ok initial thoughts/planning. i think i still need an onclick. 
 //but maybe the onclick can just be to create the alert?
