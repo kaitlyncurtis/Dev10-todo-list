@@ -42,7 +42,7 @@
 <body>
     <div class="container-sm div-container">
         <h1>Todo List</h1>
-        <form>
+        <form onsubmit="return false">
             <div class="form-group">
                 <p>
                     <label for="task">Task</label><br>
@@ -53,7 +53,7 @@
                     <input type="number" id="days" required min=1>
                 </p>
             </div>
-            <button type="button" class="btn btn-primary" onclick="getTask()">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="getTask()">Submit</button>
         </form>
     </div>
     <p id="alerts"></p>
