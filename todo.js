@@ -1,10 +1,35 @@
 let task = ""
+let dueDate = ""
 let timeLeft = ""
+
+let today = new Date();
+let dd = today.getDate();
+let mm = today.getMonth() + 1;
+let yyyy = today.getFullYear();
+let todayDays = Math.floor(today.getTime()/86400000);
+console.log(today);
+console.log(todayDays);
+if(dd<10) {
+    dd = `0${dd}`;
+}
+if(mm<10) {
+    mm = `0${mm}`;
+}
+let minDate = [yyyy,mm,dd+1].join("-");
+console.log(minDate);
 //do variables need to be initialized outside of a function to be globally accessible by the whole JS document?
 function getTask() {  //this function checks each error condition. if the input passes, it executes createAlert()
     task = document.getElementById("task").value;  
-    timeLeft = document.getElementById("days").value;
-    
+    dueDate = document.getElementById("date").value;
+    console.log(dueDate);   //does return yyyy-mm-dd string
+    dueDateDate = new Date(dueDate);
+    console.log(dueDateDate);
+    console.log(dueDateDate.toLocaleDateString());
+    let dueDays = Math.floor(dueDateDate.getTime()/86400000);
+    console.log(dueDays);
+    console.log(dueDays - todayDays);
+    timeLeft = 0
+
     if(task.length == 0) {  //relies on HTML5 built in error message displaying to UI.
         return;             //goal for future versions: replace built in HTML5 validation with my own custom error message pushes
         }                   //reason: the HTML5 seems to only work/work best when the form is actually SUBMITTED
@@ -45,6 +70,11 @@ function createAlert() {
     document.getElementById("days").value = "";
     document.getElementById("task").focus()
 }
+
+//working on date; i need to store TODAY in order to display # of days on the alert
+//but also need to store TOMORROW so I can set it as min value for date input
+//solved it: i used dd+1 in the format string.
+//what's the best way to get the validation set by using a function?
 
 //fixed up validation!!!! to check if a field is filled, checking the boolean expression variable.length == 0
 //this seemed to solve all my issues and it seems like the HTML5 validation is now working as well
